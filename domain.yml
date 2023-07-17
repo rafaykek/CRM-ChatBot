@@ -1,0 +1,290 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - techflo_related
+  - carry_out_deal
+  - crm_related1
+  - crm_related2
+  - crm_related3
+  - crm_related4
+  - crm_related5
+  - app_related1
+  - app_related2
+  - app_related3
+  - app_related4
+  - app_related5
+  - app_related6
+  - give_time
+  - add_contact
+  - request_add_contact
+  - inform_add_contact
+  - inform
+actions:
+  - action_show_time
+  - utter_ask_continue
+  - utter_add_contact_slots
+  - utter_submit
+  - validate_add_contact_form
+
+entities:
+  - contact_name
+  - company_name
+  - role
+  - contact_type
+  - contact_num
+  - contact_email
+  - street
+  - city
+  - country
+
+
+slots:
+  contact_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: contact_name
+
+  company_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: company_name
+
+  role:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: role
+
+  contact_type:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: contact_type
+
+  contact_num:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: contact_num
+
+  contact_email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: contact_email
+
+  street:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: street
+
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: city
+
+  country:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: country
+
+forms:
+  add_contact_form:
+    required_slots:
+      - contact_name
+      - company_name
+      - role
+      - contact_type
+      - contact_num
+      - contact_email
+      - street
+      - city
+      - country 
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Techflo."
+
+  utter_respond:
+  - text: " Techflo is a software house in Islamabad. At Techflo, we build solutions to minimize this repetitive work enabling your team to focus on new ways to propel your company forwards."
+
+  utter_carry_out_deal:
+  - text: "The process of carrying out a deal typically involves the following steps: 
+  1) Qualifying the lead
+  2) Identifying needs and requirements
+  3) Presenting a solution or proposal
+  4) Negotiating terms and pricing
+  5) Obtaining necessary approvals
+  6) Closing the deal."
+  
+  utter_crm_related1:
+  - text: "CRM stands for Customer Relationship Management. It is a tool which helps you to foster the relationship with your customers and contacts. The various entries you make in the system about your customers are - Name, contact details, personal information, product they bought, any complaints and issues they might have had and their status etc. Almost everything that helps you know and serve your customers better.The ultimate aim is to increase your sales and revenue by serving your customers well and staying connected with them."
+  
+  utter_crm_related2:
+  - text: "Here are some of the important advantages of CRM:
+  i.) Stores vast information in an organized way, properly categorized for future reference.
+  ii.) Task tracking: Lets you fix appointments and alerts you about the upcoming task. Allows synchronization of data with calendars for timely reminders.
+  iii.) Efficient management of employees' performance, progress assisting you with recognizing training needs.
+  iv.) Selling opportunities: With information about customer's likes and preferences you get more selling opportunity."
+
+  utter_crm_related3:
+  - text: "The buyer's persona helps you to target the desired customers, make product improvement and helps to understand the real needs and concerns of the customers. It also helps you to create content that you can be used towards your prospects.In order to know your buyer's persona you need to keep in mind the following:
+  i.) Identity your buyers: Use demographics such as their age, gender, etc.
+  ii.) Know what they need: Try to understand the challenges they are facing and how your product or service help them."
+
+  utter_crm_related4:
+  - text: "Here are a few ways through which you can improve your CRM strategy with social media:
+  i.) Keep an open eye on your customer's journey and try to know the engagement metrics which helps to build a long-term relationship. Connect with your customers at each step of the journey. Connect so they remember your brand.
+  ii.) Do not neglect the negative comments.A CRM strategy needs to understand the buyer's journey at all stages."
+
+  utter_crm_related5:
+  - text: "CRM can be pretty helpful in managing the emails and contact details from customers. It can:
+  i.) Sort the emails from customers.
+  ii.) Automatically send an email to right destination with set rules.
+  iii.) Send auto replies.
+  iv.) Correlate the emails, incidences and customers.
+  v.) Manage emails with multiple attachments."
+
+
+  utter_app_related1:
+  - text: "We're excited to have you on board! Let me give you a quick overview of the features our app offers.
+  Once you log in, you'll be greeted by a sidebar with different items, including Dashboard, Contact, and Sales. The Dashboard is where you'll find visually presented data, such as new customers, new orders, and growth statistics. It provides a convenient way to stay informed about your business's key metrics.
+  Moving on to the Contacts page, you'll have access to a comprehensive list of both company and user contacts. This allows you to easily view and manage your contacts within a centralized repository. Additionally, you'll have the option to export your contacts as a CSV file for further use.
+  In the Sales menu, you'll find two sub-items: Deals and Overview. The Deals section is where you can create and view all your deals. It offers a convenient way to manage your ongoing deals and keep track of their progress. The Overview provides a comprehensive summary of your deals, giving you a high-level view of their overall performance.
+  Furthermore, our app includes user profiles with various navigation features. These profiles offer a personalized experience, providing you with easy access to different app components tailored to your needs. With an intuitive interface, you'll be able to navigate through the app's features effortlessly.
+  We hope you find our web application user-friendly and valuable for managing your business effectively. If you have any questions along the way, feel free to ask. Enjoy using our app!"
+  
+
+  utter_app_related2:
+  - text: |
+      To add a new contact, follow these simple steps:
+      i.) Go to the Contacts page in the sidebar.
+      ii.) Look for the "Add Contact" button.
+      iii.) Click on it to open the contact creation form.
+      iv.) Fill in the necessary details, such as name, email, phone number, and any other relevant information.
+      v.) Once you have entered all the required information, click on the "Save" button to create the new contact.
+      vi.) The contact will now be added to your contact list and will be available for you to view and manage.
+
+      We hope you find our web application user-friendly and valuable for managing your business effectively. If you have any questions along the way, feel free to ask. Enjoy using our app!
+
+
+  utter_app_related3:
+  - text: "To view all the contacts, follow these simple steps:
+  i.) Go to the Contacts page in the sidebar.
+  ii.) There you can see all the contacts.
+  iii.) You can also search from these contacts.
+  We hope you find our web application user-friendly and valuable for managing your business effectively. If you have any questions along the way, feel free to ask. Enjoy using our app!"
+  
+  utter_app_related4:
+  - text: |
+      To add a new company, follow these simple steps:
+      i.) Go to the Contacts page in the sidebar.
+      ii.) Look for the "Add Company" button in the 'Companies' section.
+      iii.) Click on it to open the company creation form.
+      iv.) Fill in the necessary details.
+      v.) Once you have entered all the required information, click on the "Save" button to create the new Company.
+      vi.) The company will now be added to your company list and will be available for you to view and manage.
+      We hope you find our web application user-friendly and valuable for managing your business effectively. If you have any questions along the way, feel free to ask. Enjoy using our app!
+
+  utter_app_related5:
+  - text: |
+      To view all the companies, follow these simple steps:
+      i.) Go to the Contacts page in the sidebar.
+      ii.) There you can see all the companies in the 'Companies' section.
+      iii.) You can also search for specific companies.
+      We hope you find our web application user-friendly and valuable for managing your business effectively. If you have any questions along the way, feel free to ask. Enjoy using our app!
+
+  utter_app_related6:
+  - text: |
+      To create a deal, follow these simple steps:
+      i.) Go to the Sales page in the sidebar.
+      ii.) Select the subitem 'Deal' from 'Sales' tab.
+      ii.) Look for the "Add Deal" button in the 'Deals' section.
+      iii.) Click on it to open the Deal creation form.
+      iv.) Fill in the necessary details.
+      v.) Once you have entered all the required information, click on the "Save" button to create the new Deal.
+      vi.) The Deal will now be added to your Deals list and will be available for you to view and manage.
+      We hope you find our web application user-friendly and valuable for managing your business effectively. If you have any questions along the way, feel free to ask. Enjoy using our app!
+
+  utter_submit:
+  - text: "Contact Added Successfully!"
+  utter_add_contact_slots:
+  - text: |
+      Contact Added Successfully with credentials.
+      Name: {contact_name}
+      Company Name: {company_name}
+      Role: {role}
+      Contact Type: {contact_type}
+      Contact Number: {contact_num}
+      Email: {contact_email}
+      Address: {street} , {city} , {country}
+  utter_ask_continue:
+  - text: Are you sure you want to stop adding the contact?
+  utter_ask_contact_name:
+  - text: What is the name of the contact?
+  utter_ask_contact_type:
+  - text: What is the type of the contact?
+  utter_ask_contact_num:
+  - text: What is the phone number of the contact?
+  utter_ask_company_name:
+  - text: What is the name of the company?
+  utter_ask_role:
+  - text: What is the role of the contact?
+  utter_ask_contact_email:
+  - text: What is the contact's email?
+  utter_ask_street:
+  - text: What is the street address of the contact?
+  utter_ask_city:
+  - text: What is the city of the contact?
+  utter_ask_country:
+  - text: What is the country of the contact?
+
+
+
+
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  name: "CRM-ChatBot"

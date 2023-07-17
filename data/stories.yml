@@ -1,0 +1,224 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet 
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Curiosity
+  steps:
+  - intent: techflo_related
+  - action: utter_respond
+  - intent: crm_related1
+  - action: utter_crm_related1
+
+- story: Carry out a Deal Steps
+  steps:
+  - intent: carry_out_deal
+  - action: utter_carry_out_deal
+
+- story: Questions General
+  steps:
+  - intent: crm_related2
+  - action: utter_crm_related2
+  - intent: crm_related3
+  - action: utter_crm_related3
+  - intent: crm_related4
+  - action: utter_crm_related4
+
+  
+- story: Social Media
+  steps:
+  - intent: crm_related4
+  - action: utter_crm_related4
+
+- story: Organizing Contacts
+  steps:
+  - intent: crm_related5
+  - action: utter_crm_related5
+
+- story: App Information
+  steps:
+  - intent: app_related1
+  - action: utter_app_related1
+
+- story: App Add Contact.
+  steps:
+  - intent: app_related2
+  - action: utter_app_related2
+
+- story: App View Contact.
+  steps:
+  - intent: app_related3
+  - action: utter_app_related3
+
+- story: App Add Company.
+  steps:
+  - intent: app_related4
+  - action: utter_app_related4
+
+- story: App View Company.
+  steps:
+  - intent: app_related5
+  - action: utter_app_related5
+
+- story: App Add Deal.
+  steps:
+  - intent: app_related6
+  - action: utter_app_related6
+
+- story: path about time.
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_time
+  - action: action_show_time
+
+
+
+# - story: Add contact using chatbot.
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: add_contact
+#   - action: action_add_contact
+
+
+
+
+
+
+#  PreDefined Commands
+# - story: Create a Lead
+#   steps:
+#   - intent: create_lead
+#   - action: action_create_lead
+#   - intent: provide_lead_details
+#   - action: action_create_lead
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: add_contact
+#   - action: add_contact_form
+#   - active_loop: add_contact_form
+#   - slot_was_set:
+#     - requested_slot: contact_name
+#   - intent: inform_add_contact
+#     entities:
+#     - contact_name: Abeera
+#   - slot_was_set:
+#     - contact_name: Abeera
+#   - action: add_contact_form
+#   - slot_was_set:
+#     - contact_name: Abeera
+#   - slot_was_set:
+#     - requested_slot: company_name
+#   - intent: inform_add_contact
+#   - action: action_default_fallback
+#   - intent: inform_add_contact
+#     entities:
+#     - company_name: Techflo
+#   - slot_was_set:
+#     - company_name: Techflo
+#   - action: add_contact_form
+#   - slot_was_set:
+#     - company_name: The company name is Techflo
+#   - slot_was_set:
+#     - requested_slot: role
+#   - intent: inform_add_contact
+#     entities:
+#     - role: Manager
+#   - slot_was_set:
+#     - role: Manager
+#   - action: add_contact_form
+#   - slot_was_set:
+#     - role: Manager
+#   - slot_was_set:
+#     - requested_slot: contact_type
+#   - intent: inform_add_contact
+#     entities:
+#     - contact_type: Vendor
+#   - slot_was_set:
+#     - contact_type: Vendor
+#   - action: add_contact_form
+#   - slot_was_set:
+#     - contact_type: Vendor
+#   - slot_was_set:
+#     - requested_slot: contact_num
+#   - intent: inform_add_contact
+#     entities:
+#     - contact_num: '03215863345'
+#   - slot_was_set:
+#     - contact_num: '03215863345'
+#   - action: add_contact_form
+#   - slot_was_set:
+#     - contact_num: '03215863345'
+#   - slot_was_set:
+#     - requested_slot: contact_email
+#   - intent: inform_add_contact
+#     entities:
+#     - contact_email: abc@outlook.com
+#   - slot_was_set:
+#     - contact_email: abc@outlook.com
+#   - action: add_contact_form
+#   - slot_was_set:
+#     - contact_email: abc@outlook.com
+#   - slot_was_set:
+#     - requested_slot: street
+#   - intent: inform_add_contact
+#     entities:
+#     - street: G11/2
+#   - slot_was_set:
+#     - street: G11/2
+#   - action: add_contact_form
+#   - slot_was_set:
+#     - street: G11/2
+#   - slot_was_set:
+#     - requested_slot: city
+#   - intent: inform_add_contact
+#     entities:
+#     - city: Islamabad
+#   - slot_was_set:
+#     - city: Islamabad
+#   - action: add_contact_form
+#   - slot_was_set:
+#     - city: Islamabad
+#   - slot_was_set:
+#     - requested_slot: country
+#   - intent: inform_add_contact
+#     entities:
+#     - country: Pakistan
+#   - slot_was_set:
+#     - country: Pakistan
+#   - action: add_contact_form
+#   - slot_was_set:
+#     - country: Pakistan
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: utter_submit
+

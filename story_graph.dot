@@ -1,0 +1,33 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class=active, fontsize=12, label=action_session_start];
+2 [class=active, fontsize=12, label=add_contact_form];
+4 [class=active, fontsize=12, label=action_default_fallback];
+5 [class=active, fontsize=12, label=add_contact_form];
+13 [class=active, fontsize=12, label=utter_submit];
+14 [class=active, fontsize=12, label=utter_add_contact_slots];
+15 [class="dashed active", fontsize=12, label=action_unlikely_intent];
+16 [class="intent active", fillcolor=lightblue, label="/add_contact", shape=rect, style=filled];
+17 [class="intent active", fillcolor=lightblue, label="/inform_add_contact", shape=rect, style=filled];
+18 [class="intent active", fillcolor=lightblue, label="/inform_add_contact", shape=rect, style=filled];
+19 [class="intent active", fillcolor=lightblue, label="/inform_add_contact", shape=rect, style=filled];
+20 [class="intent active", fillcolor=lightblue, label="/inform_add_contact", shape=rect, style=filled];
+21 [class="intent active", fillcolor=lightblue, label="/deny", shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 16  [class=active, key=0];
+2 -> 17  [class=active, key=0];
+2 -> 18  [class=active, key=0];
+4 -> 19  [class=active, key=0];
+5 -> 13  [class=active, key=NONE, label=""];
+5 -> 20  [class=active, key=0];
+13 -> 14  [class=active, key=NONE, label=""];
+14 -> 21  [class=active, key=0];
+16 -> 2  [class=active, key=0];
+17 -> 4  [class=active, key=0];
+18 -> 2  [class=active, key=0];
+19 -> 5  [class=active, key=0];
+20 -> 5  [class=active, key=0];
+21 -> 15  [class=active, key=0];
+}

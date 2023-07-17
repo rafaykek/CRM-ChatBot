@@ -1,0 +1,429 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - thanks
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: techflo_related
+  examples: |
+    - What is Techflo?
+    - Is techflo a software house?
+    - Does techflo operate in software?
+    - Techflo is a company to create softwares?
+- intent: carry_out_deal
+  examples: |
+    - How is a deal carried out?
+    - What is the process of closing a deal?
+    - Can you explain the process of finalizing a deal?
+    - What are steps to finalize a deal?
+    - How can I finalize the deal?
+    - complete the deal steps
+    - commit the deal with the client steps
+    - Briefly explain the steps involved in finalizing the deal.
+- intent: crm_related1
+  examples: |
+    - What is CRM?
+    - What does CRM stands for?
+    - What do you mean by CRM?
+    - Do you know about CRM?
+    - CRM stands for what?
+    - What do exactly mean by CRM?
+    - Explain CRM?
+    - Can you briefly tell me about CRM?
+- intent: crm_related2
+  examples: |
+    - What are the benefits of using CRM?
+    - How can CRM help me?
+    - How can we use crm to benefit us?
+    - What are the advantages of using CRM?
+    - How can CRM be used to benefit the business?
+    - State the advantages of CRM.
+    - How can we know that crm is important for us?
+    - What are some prime advantages of using crm?
+- intent: crm_related3
+  examples: |
+    - How do you know about buyer's persona?
+    - How do you gather buyer's personna?
+    - How do you gather buyer's information?
+    - How can we formally ask for the buyer's information?
+    - What are some things you should ask from a buyer?
+    - What you should know about the buyer?
+    - How can you gather buyer's profile data?
+- intent: crm_related4
+  examples: |
+    - How will you improve your CRM strategy using Social Media?
+    - How can social media impact the CRM?
+    - What is the role of social media in our CRM project?
+    - How is Social Media beneficial for us?
+    - How can we use social media for marketing of our crm project?
+    - How can we improve the CRM strategy using social media techniques?
+    - Benefits of social media are?
+- intent: crm_related5
+  examples: |
+    - How can a CRM help in managing customer emails?
+    - How can we manage customer emails?
+    - Can crm help us in organizing data such as emails?
+    - I want to organize the contact emails and contact information how can I do that?
+    - I want to ogranize contact information using CRM?
+    - Can CRM be beneficial for organizing emails?
+    - Can CRM organize the profile contacts?
+    - Can CRM be beneficial in organizing your team and their contatcs?
+- intent: app_related1
+  examples: |
+    - Briefly explain about the app.
+    - I am a new user and I want to gain knowledge about the app
+    - How do I get started with the app?
+    - Provide me a tutorial on the app.
+    - How can I use the app?
+    - I want to learn about the app.
+    - I want to get tricks and techniques about the app.
+    - I want to learn more about the app.
+    - I am unable to use the app.
+    - I need help with the app.
+    - I need more information about the app.
+    - I need help with how can I use the app.
+    - Briefly explain about the website.
+    - I am a new user and I want to gain knowledge about the website
+    - How do I get started with the website?
+    - Provide me a tutorial on the website.
+    - How can I use the website?
+    - I want to learn about the website.
+    - I want to get tricks and techniques about the website.
+    - I want to learn more about the website.
+    - I am unable to use the website.
+    - I need help with the website.
+    - I need more information about the website.
+    - I need help with how can I use the website.
+- intent: app_related2
+  examples: |
+    - How can I add a contact?
+    - What are the steps to add a contact?
+    - How can one add a contact to app?
+    - How can I generate a new contact.
+    - I want to add a contact how can I do it.
+    - How to add contact?
+    - I want to manually add a contact.
+    - Can you take me to add contact page.
+    - Navigate me to the add contacts page.
+    - I want to add a new contact to my contact directory.
+    - How can I add a new contact in this website.
+    - I need help with adding a new contact.
+    - I want to manually add a new contact to my contact directoy.
+- intent: app_related3
+  examples: |
+    - How can I view a contact?
+    - What are the steps to view a contact?
+    - How can one view a contact?
+    - I want to view a contact how can I do it.
+    - How to view contact?
+    - I want to manually view a contact.
+    - Can you take me to view contact page.
+    - Navigate me to the view contacts page.
+    - I want to view a contact in my contact directory.
+    - How can I view a contact in this website.
+    - I need help with viewing a contact.
+    - I want to manually view a contact in my contact directoy.
+    - How can I view an already existing contact in this website.
+    - I need to look for already existing contact in this app.
+    - I want to look for contacts in my contacts.
+- intent: app_related4
+  examples: |
+    - How can I add a new company?
+    - What are the steps to add a company?
+    - How can one add a company to app?
+    - I want to add a new company how can I do it.
+    - How to add company?
+    - I want to manually add a company.
+    - Can you take me to add company page.
+    - Navigate me to the add comapny page.
+    - I want to add a new company to my company directory.
+    - How can I add a new company in this website.
+    - I need help with adding a new company.
+    - I want to manually add a new company to my company directoy.
+- intent: app_related5
+  examples: |
+    - How can I view a company?
+    - What are the steps to view a company?
+    - How can one view a company?
+    - I want to view a company how can I do it.
+    - How to view companies?
+    - I want to manually view a company.
+    - Can you take me to view companies page.
+    - Navigate me to the view company page.
+    - I want to view a company in my company directory.
+    - How can I view a company in this website.
+    - I need help with viewing a company.
+    - I want to manually view a company in my company directoy.
+    - How can I view an already existing company in this website.
+    - I need to look for already existing company in this app.
+    - I want to look for contacts in my companies.
+- intent: app_related6
+  examples: |
+    - How can I create a deal?
+    - What can I lock the deal?
+    - I want to create and lock deal?
+    - Idk how i can lock the deal.
+    - I want to go to deal page
+    - I need help creating a deal page.
+    - I wan help to lock a deal.
+    - Can we add a deal in this app/website.
+    - Need help going to the deal page.
+    - Need help locking and creating a deal.
+    - Can I create a deal?
+    - What are steps involved in creating a deal.
+    - Tell me the steps in creating a deal.
+    - I want to create a deal with a company.
+    - How can we add multiple deals in this app.
+- intent: give_time
+  examples: |
+    - can you tell me what time it is?
+    - tell me the time
+    - got the time
+    - what time is it
+- intent: add_contact
+  examples: |
+    - can you [add a contact] for me?w
+    - [Insert a contact]
+    - [Add contact for me]
+    - [contact add]
+    - please [add a contact for me]?
+    - [initialize a new contact]
+    - Add a new contact
+    - I want to add a new contact can you do it for me
+    - can you [add a new contact] for me?
+    - can you Insert a contact
+    - contact insert for me
+    - [insert contact] in my contact directory
+    - can u add a contact
+- intent: inform_add_contact
+  examples: |
+    - i'd like to add [Hamid](contact_name) to my contacts.
+    - I want to add [Ali](contact_name) to my contacts.
+    - Add [Ibrahim](contact_name) to contact directory.
+    - add contact named [Yasir](contact_name)
+    - please add [farhan](contact_name) in my contact directory
+    - initialize a new contact named [Ahmed](contact_name)
+    - Generate a new contact [Raza Syed](contact_name)
+    - Insert contact with credentials [Tabish](contact_name)
+    - can you [Ali](contact_name) for me?
+    - Add [Raza](contact_name)
+    - Insert [Hamid](contact_name)
+    - Insert [Muhammad](contact_name) in contacts for me
+    - Add [Muhammad](contact_name) in contacts for me
+    - I want to save this contact named [Farhan](contact_name)
+    - Add contact with credentials Name:[Farhan](contact_name), Contact Number ['+92 300 1234567'](contact_num)
+    - Add this contact ['+92 300 1234567'](contact_num) for me
+    - Add a contact with company named [ABC company](company_name) for me
+    - Add a contact associated with company named [ABC company](company_name)
+    - Add a contact associated with [ABC company](company_name)
+    - I want to add a new [Manager](role) for [ABC company](company_name)
+    - Add a new [Manager](role)
+    - [Muhammad](contact_name)
+    - [Muhammad Ahmed](contact_name)
+    - [Muhammad Syed](contact_name)
+    - [Ali raza](contact_name)
+    - [Jabbar](contact_name)
+    - [Ihtasham Ahmed](contact_name)
+    - [Maira Yousaf](contact_name)
+    - [Fatima](contact_name)
+    - [Aleezahd](contact_name)
+    - [Hinna Ahmed](contact_name)
+    - [ibtasam](contact_name)
+    - [Raza Muhammad](contact_name)
+    - [Ali](contact_name)
+    - [Muhammad Hassan](contact_name)
+    - [Muhammad Usman](contact_name)
+    - [Ali Zain](contact_name)
+    - [zain](contact_name)
+    - [Ayan](contact_name)
+    - [Hamza](contact_name)
+    - [Omar](contact_name)
+    - [Bilal](contact_name)
+    - [Ahsan](contact_name)
+    - [Maryam](contact_name)
+    - [Hira](contact_name)
+    - [Mahnoor](contact_name)
+    - [Aisha](contact_name)
+    - [Sana](contact_name)
+    - [Sara](contact_name)
+    - [Zong](company_name)
+    - [Dot Republic Media](company_name)
+    - [Patari](company_name)
+    - [Cowlar](company_name)
+    - [KeepTruckin](company_name)
+    - [Daewoo)](company_name)
+    - [SimSim](company_name)
+    - [TPL](company_name)
+    - [Cheetay.pk)](company_name)
+    - [Systems Limited](company_name)
+    - [Shopistan](company_name)
+    - [Nayatel](company_name)
+    - [Dawood Hercules Corporation](company_name)
+    - [Lucky Cement Limited](company_name)
+    - [GM](role)
+    - [CEO](role)
+    - [QA](role)
+    - [Developer](role)
+    - [Manager](role)
+    - [Staff](role)
+    - [Owner](role)
+    - [Customer Support](role)
+    - [Operator](role)
+    - [Sale](contact_type)
+    - [Partner](contact_type)
+    - [Vendor](contact_type)
+    - [Supplier](contact_type)
+    - [Manager](contact_type)
+    - ['03212345678'](contact_num)
+    - ['+92511234567'](contact_num)
+    - ['+92 300 1234567'](contact_num)
+    - ['+923001234567'](contact_num)
+    - ['03001234567'](contact_num)
+    - ['0900 12345'](contact_num)
+    - ['0800 12345'](contact_num)
+    - ['+923121234567'](contact_num)
+    - ['+92 345 1234567'](contact_num)
+    - ['03331234567'](contact_num)
+    - [fasds@gmail.com](contact_email)
+    - [sadas@yahoo.com](contact_email)
+    - [sadas@outlook.com](contact_email)
+    - [wqeqw@gmail.com](contact_email)
+    - [sadaa@gmail.com](contact_email)
+    - [asdas@yahoo.com](contact_email)
+    - [fdsff@gmail.com](contact_email)
+    - [sdas@outlook.com](contact_email)
+    - [fasds@mail.com](contact_email)
+    - [asds@techflo.com](contact_email)
+    - [fasds@gmail.com](street)
+    - [sadas@yahoo.com](street)
+    - [sadas@outlook.com](street)
+    - [wqeqw@gmail.com](street)
+    - [sadaa@gmail.com](street)
+    - [asdas@yahoo.com](street)
+    - [fdsff@gmail.com](street)
+    - [asdas@outlook.com](street)
+    - [fasds@mail.com](street)
+    - [fasds@techflo.com](street)
+    - [Islamabad](city)
+    - [Karachi](city)
+    - [Lahore](city)
+    - [Faisalabad](city)
+    - [Rawalpindi](city)
+    - [Multan](city)
+    - [Peshawar](city)
+    - [Quetta](city)
+    - [Hyderabad](city)
+    - [Gujranwala](city)
+    - [Pakistan](country)
+    - [India](country)
+    - [USA](country)
+    - The company name is [Techflo](company_name)
+    - The contact name is [Hamid](contact_name)
+    - The contact email is [asdas@outlook.com](contact_email)
+    - The contact email is [fasds@mail.com](contact_email)
+    - The contact email is [fasds@techflo.com](contact_email)
+    - The contact street is [E11/2](street)
+    - The contact city is [Islamabad](city)
+    - The contact city is [Karachi](city)
+    - The contact city is [Lahore](city)
+    - The contact city is [Faisalabad](city)
+    - The contact city is [Rawalpindi](city)
+    - The contact city is [Multan](city)
+    - The contact city is [Peshawar](city)
+    - The contact city is [Quetta](city)
+    - The contact city is [Hyderabad](city)
+    - The contact city is [Gujranwala](city)
+    - The contact country is [Pakistan](country)
+    - The contact country is [India](country)
+    - The contact country is [USA](country)
+    - The contact number is [03213131341](contact_num)
+    - The contact number is [3213112](contact_num)
+    - The contact number is [234432](contact_num)
+    - The contact name is [Abeera](contact_name)
+    - The company name is [Techflo](company_name)
+    - [Manager](role)
+    - [Vebdor](contact_type)
+    - The contact number is [03215863345](contact_num)
+    - the contact email is [abc@outlook.com](contact_email)
+    - The street is [G11/2](street)
+    - The city name is [Islamabad](city)
+    - The country name is [Pakistan](country)
