@@ -1,5 +1,5 @@
 # CRM-ChatBot
-This repository consists of Rasa implementation of a ChatBot designed for CRM project. 
+This repository consists of Rasa implementation of a ChatBot designed for CRM project to automate procedures. This chatbot is capable of adding updating user info, an interactive way of maintaining database.
 
 
 
